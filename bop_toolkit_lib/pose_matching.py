@@ -1,5 +1,3 @@
-# Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
-# Center for Machine Perception, Czech Technical University in Prague
 
 """Matching of estimated poses to the ground-truth poses."""
 

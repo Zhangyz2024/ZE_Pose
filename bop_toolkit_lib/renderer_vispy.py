@@ -1,7 +1,3 @@
-# Author: Gu Wang (guwang12@foxmail.com)
-# Tsinghua University
-# Adapted based on the glumpy version: "./renderer_py.py"
-"""A Python Vispy based renderer."""
 
 import os
 
@@ -106,20 +102,6 @@ void main() {
 }
 """
 
-# Depth vertex shader.
-# Ref: https://github.com/julienr/vertex_visibility/blob/master/depth.py
-#
-# Getting the depth from the depth buffer in OpenGL is doable, see here:
-#   http://web.archive.org/web/20130416194336/http://olivers.posterous.com/linear-depth-in-glsl-for-real
-#   http://web.archive.org/web/20130426093607/http://www.songho.ca/opengl/gl_projectionmatrix.html
-#   http://stackoverflow.com/a/6657284/116067
-# but it is difficult to achieve high precision, as explained in this article:
-# http://dev.theomader.com/depth-precision/
-#
-# Once the vertex is in the view coordinates (view * model * v), its depth is
-# simply the Z axis. Hence, instead of reading from the depth buffer and undoing
-# the projection matrix, we store the Z coord of each vertex in the color
-# buffer. OpenGL allows for float32 color buffer components.
 _depth_vertex_code = """
 uniform mat4 u_mv;
 uniform mat4 u_mvp;
@@ -145,10 +127,6 @@ void main() {
 }
 """
 
-
-# Functions to calculate transformation matrices.
-# Note that OpenGL expects the matrices to be saved column-wise.
-# (Ref: http://www.songho.ca/opengl/gl_transform.html)
 
 
 def _calc_model_view(model, view):

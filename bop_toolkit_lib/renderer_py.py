@@ -1,5 +1,3 @@
-# Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
-# Center for Machine Perception, Czech Technical University in Prague
 
 """A Python based renderer."""
 
@@ -15,10 +13,6 @@ from bop_toolkit_lib import renderer
 from glumpy.log import log
 import logging
 log.setLevel(logging.WARNING)  # Options: ERROR, WARNING, DEBUG, INFO.
-
-# Set backend (http://glumpy.readthedocs.io/en/latest/api/app-backends.html).
-# app.use('glfw')  # Options: 'glfw', 'qt5', 'pyside', 'pyglet'.
-
 
 # RGB vertex shader.
 _rgb_vertex_code = """
@@ -104,20 +98,6 @@ void main() {
 }
 """
 
-# Depth vertex shader.
-# Ref: https://github.com/julienr/vertex_visibility/blob/master/depth.py
-#
-# Getting the depth from the depth buffer in OpenGL is doable, see here:
-#   http://web.archive.org/web/20130416194336/http://olivers.posterous.com/linear-depth-in-glsl-for-real
-#   http://web.archive.org/web/20130426093607/http://www.songho.ca/opengl/gl_projectionmatrix.html
-#   http://stackoverflow.com/a/6657284/116067
-# but it is difficult to achieve high precision, as explained in this article:
-# http://dev.theomader.com/depth-precision/
-#
-# Once the vertex is in the view coordinates (view * model * v), its depth is
-# simply the Z axis. Hence, instead of reading from the depth buffer and undoing
-# the projection matrix, we store the Z coord of each vertex in the color
-# buffer. OpenGL allows for float32 color buffer components.
 _depth_vertex_code = """
 uniform mat4 u_mv;
 uniform mat4 u_mvp;
@@ -142,11 +122,6 @@ void main() {
     gl_FragColor = vec4(v_eye_depth, 0.0, 0.0, 1.0);
 }
 """
-
-
-# Functions to calculate transformation matrices.
-# Note that OpenGL expects the matrices to be saved column-wise.
-# (Ref: http://www.songho.ca/opengl/gl_transform.html)
 
 
 def _calc_model_view(model, view):

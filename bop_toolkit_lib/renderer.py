@@ -1,5 +1,4 @@
-# Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
-# Center for Machine Perception, Czech Technical University in Prague
+
 
 """Abstract class of a renderer and a factory function to create a renderer.
 

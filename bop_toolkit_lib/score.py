@@ -1,5 +1,4 @@
-# Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
-# Center for Machine Perception, Czech Technical University in Prague
+
 
 """Calculation of performance scores."""
 

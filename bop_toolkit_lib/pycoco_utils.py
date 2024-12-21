@@ -1,6 +1,3 @@
-# Author: Martin Sundermeyer (martin.sundermeyer@dlr.de)
-# Robotics Institute at DLR, Department of Perception and Cognition
-# Code borrowed from https://rmc-github.robotic.dlr.de/common/BlenderProc/blob/develop/src/utility/CocoUtility.py
 
 import datetime
 import numpy as np

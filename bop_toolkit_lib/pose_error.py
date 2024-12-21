@@ -1,10 +1,3 @@
-# Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
-# Center for Machine Perception, Czech Technical University in Prague
-
-"""Implementation of the pose error functions described in:
-Hodan, Michel et al., "BOP: Benchmark for 6D Object Pose Estimation", ECCV'18
-Hodan et al., "On Evaluation of 6D Object Pose Estimation", ECCVW'16
-"""
 
 import math
 import numpy as np

@@ -1,10 +1,10 @@
 # encoding: utf-8
 '''
-@author: Zhigang Li
+@author: Z
 @license: (C) Copyright.
-@contact: aaalizhigang@163.com
+@contact
 @software: Pose6D
 @file: __init__.py
-@time: 18-10-24 下午9:38
+@time
 @desc:
 '''

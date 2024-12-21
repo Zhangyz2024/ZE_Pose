@@ -1,13 +1,4 @@
 # encoding: utf-8
-'''
-@author: Zhigang Li
-@license: (C) Copyright.
-@contact: aaalizhigang@163.com
-@software: Pose6D
-@file: main.py
-@time: 18-10-24 下午10:24
-@desc:
-'''
 
 from __future__ import absolute_import
 from __future__ import division

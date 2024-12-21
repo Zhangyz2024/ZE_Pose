@@ -1,13 +1,4 @@
 # encoding: utf-8
-'''
-@author: Zhigang Li
-@license: (C) Copyright.
-@contact: aaalizhigang@163.com
-@software: Pose6D
-@file: ref.py
-@time: 18-10-24 下午9:00
-@desc:
-'''
 #reference
 import numpy as np
 import os
